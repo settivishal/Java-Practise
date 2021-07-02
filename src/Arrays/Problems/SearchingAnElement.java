@@ -1,0 +1,30 @@
+package Arrays.Problems;
+
+
+public class SearchingAnElement {
+    
+    public static void main(String[] args ){
+        int[] a = {12,34,45,6,13};
+        SearchingAnElement obj = new SearchingAnElement();
+
+        int i = obj.searchPosition(a,45);
+        if(i == -1){
+            System.out.print("Value doesnt exist in the array!");
+        }else{
+            System.out.print(i+1);
+        }
+    }
+
+    private int searchPosition(int[] a, int val) {
+        if(a.length == 0) return -1;
+
+        int i;
+        for(i = 0; i< a.length; i++){
+            if(a[i] == val){
+                return i;
+            }
+        }
+        return -1;
+
+    }
+}
