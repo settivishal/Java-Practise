@@ -62,10 +62,10 @@ class ReverseLinkedList1 {
 	public static void main(String[] args)
 	{
 		ReverseLinkedList1 list = new ReverseLinkedList1();
-		list.head = new Node(85);
-		list.head.next = new Node(15);
-		list.head.next.next = new Node(4);
-		list.head.next.next.next = new Node(20);
+		ReverseLinkedList1.head = new Node(85);
+		ReverseLinkedList1.head.next = new Node(15);
+		ReverseLinkedList1.head.next.next = new Node(4);
+		ReverseLinkedList1.head.next.next.next = new Node(20);
 
 		System.out.println("Given Linked list");
 		list.printList(head);

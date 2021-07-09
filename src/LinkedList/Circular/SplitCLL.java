@@ -77,12 +77,12 @@ class SplitCLL {
 		SplitCLL list = new SplitCLL();
 
 		//Created linked list will be 12->56->2->11
-		list.head = new Node(12);
-		list.head.next = new Node(56);
-		list.head.next.next = new Node(2);
-		list.head.next.next.next = new Node(11);
-		list.head.next.next.next.next = new Node(3);
-		list.head.next.next.next.next.next = list.head;
+		SplitCLL.head = new Node(12);
+		SplitCLL.head.next = new Node(56);
+		SplitCLL.head.next.next = new Node(2);
+		SplitCLL.head.next.next.next = new Node(11);
+		SplitCLL.head.next.next.next.next = new Node(3);
+		SplitCLL.head.next.next.next.next.next = SplitCLL.head;
 
 		System.out.println("Original Circular Linked list ");
 		list.printList(head);

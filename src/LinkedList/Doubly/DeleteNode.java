@@ -53,13 +53,10 @@ public class DeleteNode {
 
 	// This function prints contents of linked list
 	// starting from the given node
-	public void printlist(Node node)
+	public void printList(Node node)
 	{
-		Node last = null;
-
 		while (node != null) {
 			System.out.print(node.data + " ");
-			last = node;
 			node = node.next;
 		}
 
@@ -117,7 +114,7 @@ public class DeleteNode {
 		dll.push(10);
 
 		System.out.print("Created DLL is: ");
-		dll.printlist(dll.head);
+		dll.printList(dll.head);
 
 		// Deleting first node
 		dll.deleteNode(dll.head);
@@ -125,12 +122,12 @@ public class DeleteNode {
 		// List after deleting first node
 		// 8->4->2
 		System.out.print("\nList after deleting first node: ");
-		dll.printlist(dll.head);
+		dll.printList(dll.head);
 
 		// Deleting middle node from 8->4->2
 		dll.deleteNode(dll.head.next);
 
 		System.out.print("\nList after Deleting middle node: ");
-		dll.printlist(dll.head);
+		dll.printList(dll.head);
 	}
 }

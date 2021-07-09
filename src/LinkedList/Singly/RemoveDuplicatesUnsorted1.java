@@ -65,13 +65,13 @@ class RemoveDuplicatesUnsorted1 {
 	public static void main(String[] args)
 	{
 		RemoveDuplicatesUnsorted1 list = new RemoveDuplicatesUnsorted1();
-		list.head = new Node(10);
-		list.head.next = new Node(12);
-		list.head.next.next = new Node(11);
-		list.head.next.next.next = new Node(11);
-		list.head.next.next.next.next = new Node(12);
-		list.head.next.next.next.next.next = new Node(11);
-		list.head.next.next.next.next.next.next
+		RemoveDuplicatesUnsorted1.head = new Node(10);
+		RemoveDuplicatesUnsorted1.head.next = new Node(12);
+		RemoveDuplicatesUnsorted1.head.next.next = new Node(11);
+		RemoveDuplicatesUnsorted1.head.next.next.next = new Node(11);
+		RemoveDuplicatesUnsorted1.head.next.next.next.next = new Node(12);
+		RemoveDuplicatesUnsorted1.head.next.next.next.next.next = new Node(11);
+		RemoveDuplicatesUnsorted1.head.next.next.next.next.next.next
 			= new Node(10);
 
 		System.out.println(
