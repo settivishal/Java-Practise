@@ -43,7 +43,7 @@ class RemoveDuplicatesUnsorted1 {
 					/* sequence of steps is important here
 					*/
 					dup = ptr2.next;
-					ptr2.next = ptr2.next.next;
+					ptr2.next = dup.next;
 					System.gc();
 				}
 				else /* This is tricky */ {

@@ -36,7 +36,7 @@ static Node removeDuplicates(Node head)
 			to_free pointer stores the next of head
 			pointer which is to be deleted.*/
 			to_free = head.next;
-			head.next = head.next.next;
+			head.next = to_free.next;
 			removeDuplicates(head);
 		}
 		

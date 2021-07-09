@@ -78,5 +78,3 @@ public static void main(String args[])
 	print();
 }
 }
-
-// This code is contributed by Prakhar Agarwal
