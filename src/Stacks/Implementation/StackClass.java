@@ -1,7 +1,7 @@
 package Stacks.Implementation;
 
 // Java code for stack implementation
-import java.util.*;
+import java.util.Stack;
 
 class StackClass
 {
