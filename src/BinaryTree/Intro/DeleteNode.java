@@ -1,6 +1,5 @@
 package BinaryTree.Intro;
 
-//! Given a a Binary Tree, find the difference between the sum of nodes at odd level and the sum of nodes at even level. Consider root as level 1, left and right children of root as level 2 and so on. 
 
 // Java program to delete element
 // in binary tree
