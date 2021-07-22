@@ -42,7 +42,7 @@ public class GetInorderSuccesor {
                 break;
             }
         }
-        return inordersuccesor;
+        return node != null ? inordersuccesor : null;
     }
 
     private static Node getSuccessor(Node node) {
