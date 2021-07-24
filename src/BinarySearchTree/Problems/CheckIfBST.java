@@ -48,6 +48,21 @@ public class CheckIfBST {
         return checkBSTValidity(node.right);
     }
 
+    //* --------Alternate---------
+    public boolean isValidBST(Node root) {
+        return isValidBSTUtil(root,Integer.MIN_VALUE,Integer.MAX_VALUE);
+    }
+    
+    public boolean isValidBSTUtil(Node root, int min, int max){
+        if(root == null) return true;
+        
+        if(root.key >= max || root.key <= min) return false;
+        
+        return isValidBSTUtil(root.left,min,root.key) && 
+            isValidBSTUtil(root.right,root.key,max);
+    }
+    //*----------------------------
+
     public static void main(String[] args){
         CheckIfBST a = new CheckIfBST();
 
@@ -61,7 +76,8 @@ public class CheckIfBST {
         a.root.right.right = a.new Node(14);
         a.root.right.right.left = a.new Node(13);
 
-        System.out.print(checkBSTValidity(a.root));
+        System.out.println(checkBSTValidity(a.root));
+        System.out.println(a.isValidBST(a.root));
     }
 
 }

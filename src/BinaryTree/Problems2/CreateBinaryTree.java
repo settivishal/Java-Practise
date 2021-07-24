@@ -55,7 +55,7 @@ public class CreateBinaryTree {
     }
 
     private static int getInorderIndex(int key, int[] inorderArray, int start, int end) {
-         for (int i = start; i <= end; i++) {
+        for (int i = start; i <= end; i++) {
             if (inorderArray[i] == key) {
                 return i;
             }
