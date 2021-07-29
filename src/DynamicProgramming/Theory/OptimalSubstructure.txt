@@ -1,0 +1,16 @@
+Optimal Substructure
+If the optimal solution to a problem P, of size n, can be calculated by looking at the optimal solutions to subproblems [p1,p2,…](not all the sub-problems) with size less than n, then this problem P is considered to have an optimal substructure.
+
+Let's understand this by taking some examples. Check whether the below problem follows optimal substructure property or not?
+
+Shortest Path Problem
+Problem Statement - Consider an undirected graph with vertices a, b, c, d, e and edges (a, b), (a, e), (b, c), (b, e),(c, d) and (d, a) with some respective weights. Find the shortest path between a and c.
+
+This problem can be broken down into finding the shortest path between a & b and then shortest path between b & c and this can give a valid solution i.e. shortest path between a and c.
+
+We need to break this for all vertices between a & c to check the shortest and also direct edge a-c if exits. So the following problem can be broken down into sub-problems and it can be used to find the optimal solution to the bigger problem(also the subproblems are optimal). So this problem has an optimal substructure.
+
+Longest Path Problem
+Problem Statement - For the same undirected graph, we need to find the longest path between a and d.
+
+Let us suppose the longest path is a->e->b->c->d, but if we think like the same manner and calculate the longest paths by dividing the whole path into two subproblems i.e. between a & c i.e. (a->e->b->c) and c & d i.e. (c->b->e->a->d), it won’t give us a valid(because we need to use non-repeating vertices) longest path between a & d. So this problem does not follow optimal substructure property because the substructures are not leading to some solution.
