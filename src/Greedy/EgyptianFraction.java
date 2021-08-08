@@ -44,7 +44,7 @@ class EgyptianFraction {
 		System.out.print("1/" + n + " + ");
 
 		// Recur for remaining part
-		printEgyptian(nr * n - dr, dr * n); //* basically subtracting original from n
+		printEgyptian(nr * n - dr, dr * n); //* basically subtracting n from original
 	}
 
 // Driver Code
