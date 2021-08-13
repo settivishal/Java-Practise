@@ -41,8 +41,7 @@ class JobSequencing
 
 		// Sort all jobs according to
 		// decreasing order of profit
-		Collections.sort(arr,
-						(a, b) -> b.profit - a.profit);
+		Collections.sort(arr,(a, b) -> b.profit - a.profit);
 
 		// To keep track of free time slots
 		boolean result[] = new boolean[t];
@@ -56,9 +55,7 @@ class JobSequencing
 			// Find a free slot for this job
 			// (Note that we start from the
 			// last possible slot)
-			for (int j
-				= Math.min(t - 1, arr.get(i).deadline - 1);
-				j >= 0; j--) {
+			for (int j = Math.min(t - 1, arr.get(i).deadline - 1);j >= 0; j--) {
 
 				// Free slot found
 				if (result[j] == false)

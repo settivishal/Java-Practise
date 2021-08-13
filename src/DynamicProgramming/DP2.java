@@ -4,16 +4,16 @@ package DynamicProgramming;
 //* Solution - 1: Recursive approach: 
 //* - We can move either 1 step, 2 step or 3 steps in a jump
 //* - If we've total number ways to reach at n-1th stairs, n-2 stairs, n-3 stairs, then we can get total number of ways to reach at nth stair.
-//* - Recusively we get the solution using T(n) = T(n - 1) + T(n - 2) + T(n - 3)
+//* - Recursively we get the solution using T(n) = T(n - 1) + T(n - 2) + T(n - 3)
 
 //* Time Complexity: O(3^n)
 //* Space Complexity: O(n)
 
 //* Solution - 2: Using Dynamic Programming (Top to Down approach): 
-//* - We intialize an array with default value
+//* - We initialize an array with default value
 //* - Now we use recursive way, but whenever we get value for a particular number, we store the value in array
 //* - So by storing the value, if the same value asked again, we return from array
- 
+
 //* Time Complexity: O(n)
 //* Space Complexity: O(n)
 
@@ -26,7 +26,7 @@ package DynamicProgramming;
 
 public class DP2 {
     public static void main(String[] args){
-        int n = 4;
+        int n = 1;
 
         System.out.println(totalWaysToReachNthStair(n));
 
@@ -50,10 +50,13 @@ public class DP2 {
             b = c;
             c = d;
         }
+        if(n == 0 || n == 1) return a;
+        if(n == 2) return c;
         return d;
     }
 
     private static int totalWaysToReachNthStairBottomUp(int n) {
+        if(n == 0 || n == 1) return 1;
         int[] arr = new int[n+1];
 
         arr[0] = 1;

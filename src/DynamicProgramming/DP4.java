@@ -3,7 +3,7 @@ package DynamicProgramming;
 //! Get Longest Increasing Subsequence Length
 //*Solution: 
 //* - We initialize an array, where initial value for each number is set to 1, because a number is also a subsequence of length 1 
-//* - Now we'll traverse in a loop from 2nd element of array & will keep chekcing with every element that if this is greater than previous one & if it's LIS(j) + 1 greater than LIS(j), then update the LIS of current value
+//* - Now we'll traverse in a loop from 2nd element of array & will keep checking with every element that if this is greater than previous one & if it's LIS(j) + 1 greater than LIS(j), then update the LIS of current value
 //* - On the same time, we also store a variable as max, which will hold the maximum value 
 
 //* Time Complexity: O(n^2)
