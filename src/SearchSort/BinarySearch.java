@@ -6,9 +6,9 @@ public class BinarySearch {
         int[] a = {12,34,45,65,83};
         BinarySearch obj = new BinarySearch();
 
-        int i = obj.searchIndex(a,83,0,a.length);
+        int i = obj.searchIndex(a,83,0,a.length-1);
         if(i == -1){
-            System.out.println("Value Doesnt Exist in the Array!");
+            System.out.println("Value doesn't Exist in the Array!");
         }else{
             System.out.println(i);
         }
@@ -18,7 +18,7 @@ public class BinarySearch {
         if(a.length == 0 || start>end) return -1;
 
         int mid = start + (end-start)/2;
-        //* start + (end-start)/2 preffered over (start+end)/2
+        //* start + (end-start)/2 preferred over (start+end)/2
 
         if(val == a[mid]){
             return mid;

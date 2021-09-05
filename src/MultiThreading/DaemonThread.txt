@@ -1,0 +1,48 @@
+Simple example of Daemon thread in java
+File: MyThread.java
+
+public class TestDaemonThread1 extends Thread{  
+ public void run(){  
+  if(Thread.currentThread().isDaemon()){//checking for daemon thread  
+   System.out.println("daemon thread work");  
+  }  
+  else{  
+  System.out.println("user thread work");  
+ }  
+ }  
+ public static void main(String[] args){  
+  TestDaemonThread1 t1=new TestDaemonThread1();//creating thread  
+  TestDaemonThread1 t2=new TestDaemonThread1();  
+  TestDaemonThread1 t3=new TestDaemonThread1();  
+  
+  t1.setDaemon(true);//now t1 is daemon thread  
+    
+  t1.start();//starting threads  
+  t2.start();  
+  t3.start();  
+ }  
+}  
+Test it Now
+Output
+daemon thread work
+user thread work
+user thread work
+Note: If you want to make a user thread as Daemon, it must not be started otherwise it will throw IllegalThreadStateException.
+File: MyThread.java
+
+class TestDaemonThread2 extends Thread{  
+ public void run(){  
+  System.out.println("Name: "+Thread.currentThread().getName());  
+  System.out.println("Daemon: "+Thread.currentThread().isDaemon());  
+ }  
+  
+ public static void main(String[] args){  
+  TestDaemonThread2 t1=new TestDaemonThread2();  
+  TestDaemonThread2 t2=new TestDaemonThread2();  
+  t1.start();  
+  t1.setDaemon(true);//will throw exception here  
+  t2.start();  
+ }  
+}  
+Test it Now
+Output:exception in thread main: java.lang.IllegalThreadStateException

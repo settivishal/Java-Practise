@@ -56,10 +56,15 @@ public class CheckIfPairExists {
         Arrays.sort(a);
         int start = 0, end = a.length-1;
 
-        while(start <= end){
+        try {
+            while(start <= end){
             if(a[start]+a[end] == sum) return true;
             else if(a[start]+a[end] > sum) end--;
             else start++;
+        }
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("Nothing");
         }
         
         return false;

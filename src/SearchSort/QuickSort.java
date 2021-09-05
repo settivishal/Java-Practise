@@ -41,7 +41,7 @@ package SearchSort;
 
 public class QuickSort{
     public static void main(String[] args){
-        int[] a = {10,7,8,9,1,5};
+        int[] a = {10,7,5,9,1,8};
         int n = a.length;
 
         quickSort(a,0,n-1);
@@ -58,12 +58,14 @@ public class QuickSort{
         }
     }
 
+    //* This function takes last element as pivot,places the pivot element at its correct position in sorted array, and places all smaller (smaller than pivot) to left of pivot and all greater elements to right of pivot
     public static int partition(int[] a, int low, int high) {
         int pivot = a[high];
 
-        int i = low-1;
+        int i = low-1; //* index of smaller element 
 
         for(int j = low; j <= high; j++){
+            //* If current element is smaller than or equal to pivot 
             if(a[j] < pivot){
                 i++;
                 swap(a,i,j);
