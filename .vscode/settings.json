@@ -1,4 +1,5 @@
 {
   "java.project.sourcePaths": ["src"],
-  "cSpell.words": ["Bastin"]
+  "cSpell.words": ["Bastin"],
+  "editor.fontLigatures": true,
 }
