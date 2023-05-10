@@ -54,3 +54,5 @@ function validParanthesis(s) {
 }
 
 console.log(validParanthesis(s));
+
+console.log("Testing");
